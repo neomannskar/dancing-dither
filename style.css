@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Eczar:wght@400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nova+Square&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quintessential&family=Syne:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+:root {
+    --inter: "Inter", sans-serif;
+    --jetbrains-mono: "JetBrains Mono", monospace;
+
+    --color-primary: #faf9f6;
+    --color-secondary: #0c0c0c;
+
+    --text-primary: #0c0c0c;
+    --text-secondary: #faf9f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/* Globally Useful Rules */
+
+ul {
+    list-style: none;
+}
+
+/* CSS Rules */
+
+body {
+    color: var(--text-primary);
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--jetbrains-mono);
+    height: 100vh;
+}
+
+div.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 1920px;
+}
+
+div.ui {
+    background-color: var(--color-secondary);
+    color: var(--text-secondary);
+    font-family: var(--jetbrains-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+ul.menu li {
+    border: 1px solid var(--color-secondary);
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: none;
+}
+
+ul.menu li:hover {
+    border: 1px solid var(--color-secondary);
+    background: #faf9f6;
+    color: #0c0c0c;
+}
+
+li.separator {
+    height: 1px;
+    background: #faf9f6;
+    margin: 12px 0;
+    opacity: 0.4;
+}
+
+div.wrapper {
+    width: 1500px;
+    height: 900px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loadImage {
+    border: 1px solid var(--color-primary);
+    border: none;
+    padding: 32px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 24px;
+    background-color: var(--color-secondary);
+    color: var(--text-secondary);
+    border: 1px solid #faf9f6;
+    cursor: pointer;
+}
+
+#loadImage:hover {
+    border: 1px solid var(--color-secondary);
+    background-color: var(--color-primary);
+    color: var(--text-primary);
+}
+
+canvas {
+    max-height: 720px;
+}

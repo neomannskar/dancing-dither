@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Dancing Dither</title>
+        <meta name="description" content="Dither images online.">
+    </head>
+    <body>
+        <div class="container">
+            <div class="ui">
+                <ul class="menu">
+                    <li data-mode="bayer">BAYER 4×4</li>
+                    <li data-mode="random">RANDOM</li>
+                    <li data-mode="atkinson">ATKINSON</li>
+                    <li data-mode="floyd">FLOYD–STEINBERG</li>
+
+                    <li class="separator"></li>
+
+                    <li id="shift">SHIFT JITTER</li>
+                    <li id="invert">INVERT</li>
+                    <li id="ascii">ASCII</li>
+
+                    <li class="separator"></li>
+
+                    <li>
+                        DIRECTION
+                        <br />
+                        <br />
+                        <input
+                            id="direction"
+                            type="range"
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            value="1"
+                        />
+                    </li>
+                    <li>
+                        FALL-OFF
+                        <br />
+                        <br />
+                        <input
+                            id="falloff"
+                            type="range"
+                            min="0.2"
+                            max="4"
+                            step="0.1"
+                        />
+                    </li>
+                </ul>
+            </div>
+            <div class="wrapper">
+                <button id="loadImage">LOAD IMAGE</button>
+                <input type="file" id="fileInput" accept="image/*" hidden />
+                <canvas id="ditherCanvas"></canvas>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
